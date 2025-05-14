@@ -17,7 +17,7 @@ function sendMessage() {
   input.value = "";
   chat.scrollTop = chat.scrollHeight;
 }
-if (lower.includes("jims")) {
+  if (lower.includes("jims")) {
   reply = '<img src="jims.png" style="max-width: 200px; border-radius: 10px;">';
 }
 
