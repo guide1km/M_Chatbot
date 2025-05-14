@@ -15,6 +15,8 @@ function sendMessage() {
     reply = "Би бол chatbot.";
   } else if (lower.includes("баяртай")) {
     reply = "Баяртай, дараа уулзъя!";
+    else if (lower.includes("jims")) {
+    reply = '<img src="jims.png" style="max-width: 200px; border-radius: 10px;">';
   } 
 
   chat.innerHTML += `<div class="bot">${reply}</div>`;
