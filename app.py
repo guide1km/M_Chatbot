@@ -1,25 +1,19 @@
-from flask import Flask, request
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Chatbot</title>
+  <script src="chatbot.js" defer></script>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    #chat { border: 1px solid #aaa; padding: 10px; height: 200px; overflow-y: scroll; }
+    input { width: 80%; padding: 5px; }
+  </style>
+</head>
+<body>
+  <h2>Минимал Chatbot</h2>
+  <div id="chat"></div>
+  <input type="text" id="userInput" placeholder="Юу бичих вэ?" onkeydown="if(event.key==='Enter') sendMessage()">
 
-app = Flask(__name__)
-
-VERIFY_TOKEN = "test_token"
-PAGE_ACCESS_TOKEN = "your_page_token"
-
-@app.route("/")
-def home():
-    return "Chatbot working!"
-
-@app.route("/webhook", methods=["GET", "POST"])
-def webhook():
-    if request.method == "GET":
-        if request.args.get("hub.verify_token") == VERIFY_TOKEN:
-            return request.args.get("hub.challenge")
-        return "Invalid token", 403
-
-    if request.method == "POST":
-        data = request.get_json()
-        print("Messenger sent:", data)  # Тестийн үед л харагдана
-        return "ok", 200
-
-if __name__ == "__main__":
-    app.run()
+</body>
+</html>
