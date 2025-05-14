@@ -22,7 +22,7 @@ window.onload = () => {
   const input = document.getElementById("userInput");
   input.addEventListener("focus", () => {
     setTimeout(() => {
-      document.getElementById('chat').scrollTop = document.getElementById('chat').scrollHeight;
+      document.getElementById("chat").scrollTop = document.getElementById("chat").scrollHeight;
     }, 300);
   });
 };
