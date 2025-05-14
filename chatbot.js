@@ -30,3 +30,6 @@ window.onload = () => {
   const chat = document.getElementById("chat");
   chat.innerHTML += `<div class="bot">Сайн байна уу! Та асуултаа бичнэ үү.</div>`;
 };
+if (lower.includes("сайн уу")) {
+  reply = '<img src="jims.png" style="max-width: 200px; border-radius: 10px;">';
+}
