@@ -20,8 +20,12 @@ function sendMessage() {
   }
 
   chat.innerHTML += `<div class="bot">${reply}</div>`;
+
+  setTimeout(() => {
+    chat.scrollTop = chat.scrollHeight;
+  }, 100);
+
   input.value = "";
-  chat.scrollTop = chat.scrollHeight;
 }
 
 window.onload = () => {
