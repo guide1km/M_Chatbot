@@ -17,6 +17,9 @@ function sendMessage() {
   input.value = "";
   chat.scrollTop = chat.scrollHeight;
 }
+if (lower.includes("jims")) {
+  reply = '<img src="jims.png" style="max-width: 200px; border-radius: 10px;">';
+}
 
 window.onload = () => {
   const input = document.getElementById("userInput");
@@ -29,7 +32,4 @@ window.onload = () => {
   // Автоматаар chatbot мессеж харуулах
   const chat = document.getElementById("chat");
   chat.innerHTML += `<div class="bot">Сайн байна уу! Та асуултаа бичнэ үү.</div>`;
-};
-if (lower.includes("сайн уу")) {
-  reply = '<img src="jims.png" style="max-width: 200px; border-radius: 10px;">';
 }
