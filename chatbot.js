@@ -25,4 +25,8 @@ window.onload = () => {
       document.getElementById("chat").scrollTop = document.getElementById("chat").scrollHeight;
     }, 300);
   });
+
+  // Автоматаар chatbot мессеж харуулах
+  const chat = document.getElementById("chat");
+  chat.innerHTML += `<div class="bot">Сайн байна уу! Та асуултаа бичнэ үү.</div>`;
 };
