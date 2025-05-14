@@ -10,7 +10,7 @@ body {
 }
 
 #chat {
-  height: calc(100vh - 70px); /* Доод input-ийн өндрийг хасаад үлдсэн зайд багтана */
+  height: calc(50vh - 70px); /* Доод input-ийн өндрийг хасаад үлдсэн зайд багтана */
   overflow-y: auto;
   padding: 10px;
   box-sizing: border-box;
