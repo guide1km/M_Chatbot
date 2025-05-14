@@ -4,27 +4,16 @@ function sendMessage() {
   if (!msg) return;
 
   const chat = document.getElementById('chat');
+  chat.innerHTML += `<div class='user'>${msg}</div>`;
 
-  // Хэрэглэгчийн мессеж div
-  const userDiv = document.createElement('div');
-  userDiv.className = 'user';
-  userDiv.textContent = msg;
-  chat.appendChild(userDiv);
-
-  // Ботын хариу
-  const txt = msg.toLowerCase();
   let reply = "Уучлаарай, ойлгосонгүй.";
 
+  const txt = msg.toLowerCase();
   if (txt.includes("сайн уу")) reply = "Сайн байна уу!";
   else if (txt.includes("чи хэн бэ")) reply = "Би бол chatbot.";
   else if (txt.includes("баяртай")) reply = "Баяртай, дараа уулзъя!";
 
-  const botDiv = document.createElement('div');
-  botDiv.className = 'bot';
-  botDiv.textContent = reply;
-  chat.appendChild(botDiv);
-
-  // Input хоослох ба доош scroll хийх
+  chat.innerHTML += `<div class='bot'>${reply}</div>`;
   input.value = '';
   chat.scrollTop = chat.scrollHeight;
 }
